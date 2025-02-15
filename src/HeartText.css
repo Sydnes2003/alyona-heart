@@ -34,11 +34,37 @@
     box-shadow: 2px 2px 0px #3D3C3C;
 }
 
+.circle-image:hover {
+    box-shadow: 0px 0px 200px #fff;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
 .heart-container {
+    position: relative;
     font-family: "Kurale", serif;
     line-height: 1.1;
     white-space: pre;
     font-size: 1rem;
+}
+
+.heart-emoji {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 2s ease-in-out forwards;
+}
+
+@keyframes float {
+    0% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5) translateY(-100px);
+        opacity: 0;
+    }
 }
 
 .heart-line {
@@ -51,3 +77,10 @@
     transition: color 0.3s ease-in-out;
     text-shadow: 2px 2px 0px #3D3C3C;
 }
+
+.heart-container:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s ease-in-out;
+}
+
